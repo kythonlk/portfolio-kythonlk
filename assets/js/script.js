@@ -1,7 +1,7 @@
 'use strict';
 
 
-
+console.log("Monawada balanne");
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
