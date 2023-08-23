@@ -157,3 +157,18 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+document.addEventListener('click', (e) => {
+  const colorOption = e.target.closest('.color-option');
+  if (!colorOption) return;
+  
+  // unselect currently selected color options
+  document.querySelectorAll('.color-option').forEach(colorOption => colorOption.classList.remove('is-selected'));
+  colorOption.classList.add('is-selected');
+  
+  const color = colorOption.dataset.color;
+  
+  let root = document.documentElement;
+  root.style.setProperty('--primary-color', color);
+  
+});

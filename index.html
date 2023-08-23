@@ -24,6 +24,33 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+    .color-option {
+    height:35px;
+    width: 35px;
+    list-style: none;
+    border-radius: 4px;
+    margin: 7px;
+    transition: .2s;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 0 5px rgba(0,0,0,.2);
+    }
+    &.is-selected {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 5px rgba(0,0,0,.2);
+    }
+  }
+
+  .color-option:nth-child(1) { background: #000 }
+  .color-option:nth-child(2) { background: #3a68b7 }
+  .color-option:nth-child(3) { background: #34b7b0 }
+  .color-option:nth-child(4) { background: #4f8f44 }
+  .color-option:nth-child(5) { background: #c0582f }
+  .color-option:nth-child(6) { background: #a83030 }
+  .color-option:nth-child(7) { background: #994385 }
+</style>
+
 </head>
 
 <body>
@@ -37,7 +64,15 @@
     <!--
       - #SIDEBAR
     -->
-
+    <ul class="color-grid">
+      <li class="color-option is-selected" data-color="#000"></li>
+      <li class="color-option" data-color="#3a68b7"></li>
+      <li class="color-option" data-color="#34b7b0"></li>
+      <li class="color-option" data-color="#4f8f44"></li>
+      <li class="color-option" data-color="#c0582f"></li>
+      <li class="color-option" data-color="#a83030"></li>
+      <li class="color-option" data-color="#994385"></li>
+    </ul>
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
